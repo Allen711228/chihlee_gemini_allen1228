@@ -1,16 +1,16 @@
 [Unit]
-Description=Gemini News Bot - 國際精品新聞推播服務
+Description=Gemini News Bot - CPI 及國際能源價格推播服務
 After=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=oneshot
 User=pi
-WorkingDirectory=/home/pi/Documents/github/2026_07_26__chihlee_gemini_sunday
-Environment="PATH=/home/pi/Documents/github/2026_07_26__chihlee_gemini_sunday/.venv/bin:/usr/local/bin:/usr/bin:/bin"
-ExecStart=/home/pi/Documents/github/2026_07_26__chihlee_gemini_sunday/.venv/bin/python /home/pi/Documents/github/2026_07_26__chihlee_gemini_sunday/0913/practice4.py
+WorkingDirectory=/home/pi/Documents/github/chihlee_gemini_allen1228
+Environment="PATH=/home/pi/Documents/github/chihlee_gemini_allen1228/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/home/pi/Documents/github/chihlee_gemini_allen1228/.venv/bin/python /home/pi/Documents/github/chihlee_gemini_allen1228/0913/practice_Text.py
 
-# 標準輸出與錯誤記錄
+# 標準輸出與錯誤記錄至 journald
 StandardOutput=journal
 StandardError=journal
 SyslogIdentifier=gemini-news-bot

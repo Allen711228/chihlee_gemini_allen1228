@@ -1,0 +1,14 @@
+[Unit]
+Description=Gemini News Bot Timer - 每日定時推播 CPI 及能源價格
+Requires=gemini-news-bot.service
+
+[Timer]
+# 每天早上 08:00 執行
+OnCalendar=*-*-* 08:00:00
+# 系統啟動後 30 秒先執行一次（方便測試）
+OnBootSec=30sec
+# 如果錯過執行時間（如系統關機），開機後補執行
+Persistent=true
+
+[Install]
+WantedBy=timers.target
